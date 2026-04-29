@@ -6,40 +6,38 @@ import SkillsSection from "@/components/SkillsSection";
 import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
 import ProjectSection from "@/components/ProjectSection";
-import { FEMsets1 } from "@/components/FEMsets";
 import FEMSection from "@/components/FEMSection";
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative">
-        <NavBar />
+    <main className="min-h-screen relative bg-background">
+      <NavBar />
       
       <section className="w-full h-screen px-4">
         <HeroSection />
       </section>
 
-      <section id='aboutme' className="w-full min-h-screen bg-slate-50 px-4 py-10 flex flex-col justify-center items-center gap-12">
+      <section id='aboutme' className="w-full min-h-screen bg-muted px-4 py-20 flex flex-col justify-center items-center gap-12">
         <AboutSection />
       </section>
 
-      <section className="w-full min-h-screen  px-4 py-10 flex justify-center items-center">
+      <section className="w-full min-h-screen bg-background px-4 py-20 flex justify-center items-center">
         <Certifications />
       </section>
       
-      <section className="w-full min-h-screen bg-slate-50 px-4 py-10 flex justify-center items-center">
+      <section className="w-full min-h-screen bg-muted px-4 py-20 flex justify-center items-center">
         <SkillsSection />
       </section>
 
-      <section className="w-full min-h-screen  px-4 py-10 flex justify-center items-center">
+      <section className="w-full min-h-screen bg-background px-4 py-20 flex justify-center items-center">
         <ProjectSection />
       </section>
-      <FEMSection/>
+      
+      <FEMSection />
 
-      <section className="w-full min-h-screen bg-slate-50 px-4 py-10 flex justify-center items-center">
+      <section id="contact" className="w-full min-h-screen bg-muted px-4 py-20 flex justify-center items-center">
         <Contact />
       </section>
-
-      
     </main>
   );
 }

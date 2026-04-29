@@ -1,8 +1,7 @@
 'use client'
-import * as Font from '@/utils/font'
 import { certification } from '@/utils/data'
 import CertificateCard from './CertificateCard'
-import { motion as m,} from 'framer-motion'
+import { motion as m } from 'framer-motion'
 import InfiniteScroll from './InfiniteScroll'
 
 const Certifications = () => {
@@ -10,15 +9,20 @@ const Certifications = () => {
     
     return (
         <section className='flex flex-col items-center gap-12 w-full'>
-            <m.h1 
-                className={`${Font.monserrat.className} font-bold tracking-tight text-5xl text-center sm:text-7xl lg:text-8xl`}
-                initial={{opacity:0, y:-20, }}
-                whileInView={{opacity:1, y:0}}
-                viewport={{once: true}}
-                transition={{duration: .5 }}
+            <m.div
+                className="text-center"
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
             >
-                Certificates
-            </m.h1>
+                <h1 className="font-[family-name:var(--font-montserrat)] font-bold tracking-tight text-5xl sm:text-7xl lg:text-8xl text-foreground">
+                    Certificates
+                </h1>
+                <p className="mt-4 text-muted-foreground">
+                    Scroll horizontally or drag to browse
+                </p>
+            </m.div>
             <section className='w-full relative'>
                 <InfiniteScroll scroll='left' list={list.length}>
                     {list.map((item, idx) => (
@@ -27,7 +31,6 @@ const Certifications = () => {
                         </div>
                     ))}
                 </InfiniteScroll>
-
             </section>
         </section>
     )
